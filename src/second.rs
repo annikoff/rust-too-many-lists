@@ -53,7 +53,7 @@ impl<T> List<T> {
         })
     }
 
-    pub fn inot_iter(self) -> IntoIter<T> {
+    pub fn into_iter(self) -> IntoIter<T> {
         IntoIter(self)
     }
 
@@ -153,7 +153,7 @@ mod test {
         list.push(2);
         list.push(3);
 
-        let mut iter = list.inot_iter();
+        let mut iter = list.into_iter();
 
         assert_eq!(iter.next(), Some(3));
         assert_eq!(iter.next(), Some(2));
